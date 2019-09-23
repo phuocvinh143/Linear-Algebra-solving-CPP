@@ -147,8 +147,8 @@ void DT() {
 }
 
 int main(){
-//    freopen("input.txt", "r", stdin);
-//    freopen("output.txt", "w", stdout);
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
     cin >> n >> m;
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <= m; ++j){
@@ -178,7 +178,7 @@ int main(){
     cout << "--------------------\n";
     cout << "r(A) = " << Rank() << endl;
     cout << "--------------------\n";
-    DT();
+    if (n == m) DT();
     for (int i = n; i >= 1; --i) {
         int pos = find_pivot(i);
         if (pos != 0) {
